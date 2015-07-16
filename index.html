@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="intro">
+
+  <h1 class="page-heading">Imagine Easy <em>Open Source</em> Center</h1>
+  <p>Imagine Easy is committed to support the Open Source community, and one way to show this is by publishing parts of our code as well as selected tools developed by our dev team.</p>
+<a href="https://github.com/easybiblabs" class="button" data-hover="View on github">View on github</a>
+</div>
+<!-- <ul class="category-list">
+  <li class="php"><span>Php</span></li>
+  <li class="ruby"><span>Ruby</span></li>
+  <li class="javascript"><span>Javascript</span></li>
+  <li class="java"><span>Java</span></li>
+
+</ul> -->
+<div class="list-header">
+  <h2 class="footer-heading">{{ site.title }}</h2>
+</div>
+  
+  <ul class="post-list">
+    {% for post in site.repositories %}
+      <li class="{{post.category}}">
+        <span class="post-meta">{{post.category}}</span>
+
+        <h2>
+          <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
+          <a class="post-link" href="{{post.link}}">{{ post.title }}</a>
+        </h2>
+        <article>
+          {{ post.content }}
+        </article>
+        <a href="{{post.link}}" class="button" data-hover="visit github">visit Github</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+

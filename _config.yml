@@ -1,0 +1,17 @@
+# Site settings
+title: Imagine Easy Solutions
+
+email: ask@imagineeasy.com
+description: Open Source Projects by Imagine Easy
+baseurl: ""
+url: "http://imagineeasy.github.io"
+twitter_username: IESdev
+github_username:  easybib
+githublabs_username:  easybiblabs
+
+# Build settings
+markdown: kramdown
+
+collections:
+  repositories:
+    output: true

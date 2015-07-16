@@ -1,0 +1,66 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@font-face {
+  font-family: "Bitter-regular";
+  src: url('../assets/fonts/bitter-regular-webfont.eot');
+  src: local("☺"), url('../assets/fonts/bitter-regular-webfont.woff') format("woff"), url('../assets/fonts/bitter-regular-webfont.ttf') format("truetype"), url('../assets/fonts/bitter-regular-webfont.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// Our variables
+$base-font-family: 'ProximaNova-Regular', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$base-font-size:   1em;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #5a5a5a;
+$background-color: #f3f3ee;
+$brand-color:      #d35752;
+
+$link-color:       #e55826;
+
+$grey-color:       #898987;
+$grey-color-light: lighten($grey-color, 30%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$yellow-color:     #fba51a;
+$blue-color:       #58bdc6;
+$petrol-color:     #5f8788;
+
+// Width of the content area
+$content-width:    100%;
+
+$on-palm:          650px;
+$on-laptop:        900px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;

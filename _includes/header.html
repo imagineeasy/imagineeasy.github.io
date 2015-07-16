@@ -1,0 +1,38 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+      
+      <!-- <div class="navbar-toggle">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </div> -->
+      
+      <a href="#" onclick="changeClass()" class="navbar-toggle">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </a>
+
+      <div class="trigger">      
+        <a href="{{ site.baseurl }}/">Open Source</a>
+        <a href="http://dev.imagineeasy.com/">Blog</a>
+        <a href="#footer">Contact</a>
+        <a href="http://www.imagineeasy.com/jobs.html">We're hiring</a>
+      </div>
+    </nav>
+
+  </div>
+  
+  <script>
+  function changeClass() {
+      $(".trigger").toggleClass("show");
+  }
+
+  </script>
+
+</header>
